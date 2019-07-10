@@ -17,7 +17,9 @@ import Projects from "../views/Projects";
 import About from "../views/About";
 import Contact from "../views/Contact";
 
-import avatar from "../images/avatar.jpg";
+import BU from "../images/bu.jpg";
+import jp from "../images/jp.jpg";
+import adyen from "../images/adyen.png";
 
 const ProjectsWrapper = styled.div`
 	${tw`flex flex-wrap justify-between mt-8`};
@@ -94,12 +96,12 @@ const Index = () => (
 						circumstances.
 					</ProjectCard>
 				</ProjectsWrapper>
-				<Title>Solo Contracts</Title>
+				<Title>Independent Contracting</Title>
 				<ProjectsWrapper>
 					<ProjectCard
 						title="Catalyst"
 						link="https://www.behance.net/gallery/38068151/Eagle"
-						bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+						bg="linear-gradient(90deg, rgba(113,4,171,1) 0%, rgba(36,101,255,1) 100%);"
 					>
 						I worked over 2 contracts to build a large scale data retrieval web
 						application for Catalyst. Providing data that's unavailable to their
@@ -108,7 +110,7 @@ const Index = () => (
 					<ProjectCard
 						title='Forum "Webscraper"'
 						link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-						bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+						bg="linear-gradient(90deg, rgba(36,101,255,1) 0%, rgba(36,245,255,1) 100%);"
 					>
 						Commissioned by the head of research in the Bournemouth University
 						Sport Faculty. Using an intelligent Software architecture my design
@@ -121,7 +123,7 @@ const Index = () => (
 					<ProjectCard
 						title="UK House price heatmap"
 						link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-						bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+						bg="linear-gradient(90deg, rgba(17,85,3,1) 0%, rgba(0,176,16,1) 100%);"
 					>
 						I lead a team developing an application that fetches, transforms and
 						displays all UK houseprice data over the last 15 years. Even
@@ -130,7 +132,7 @@ const Index = () => (
 					<ProjectCard
 						title="Tempus"
 						link="https://www.behance.net/gallery/38068151/Eagle"
-						bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+						bg="linear-gradient(90deg, rgba(0,176,16,1) 0%, rgba(1,212,20,1) 100%);"
 					>
 						Tempus is a customisable timetabler with a custom compiled Domain
 						Specific Language. It's simple, you write constraints i.e. nothing
@@ -141,23 +143,26 @@ const Index = () => (
 				</ProjectsWrapper>
 			</Projects>
 			<About offset={3}>
-				<Title>About</Title>
+				<Title>Experience</Title>
 				<AboutHero>
-					<Avatar src={avatar} alt="John Doe" />
-					<AboutSub>
-						The English language can not fully capture the depth and complexity
-						of my thoughts. So I'm incorporating Emoji into my speech to better
-						express myself. Winky face.
-					</AboutSub>
+					<Avatar src={adyen} alt="John Doe" />
+					<AboutSub>Adyen &nbsp; &#8408; Current</AboutSub>
 				</AboutHero>
 				<AboutDesc>
-					You know the way you feel when you see a picture of two otters holding
-					hands? That's how you're gonna feel every day. My mother cried the day
-					I was born because she knew she’d never be prettier than me. You
-					should make me your campaign manager. I was born for politics. I have
-					great hair and I love lying. Captain? The kids want to know where
-					Paulie the Pigeon is. I told them he got sucked up into an airplane
-					engine, is that all right?
+					I will start work as a Developer at Adyen on the 16th of September
+					2019
+				</AboutDesc>
+				<AboutHero>
+					<Avatar src={jp} alt="John Doe" />
+					<AboutSub>JPMorgan Chase {"&"} Co &nbsp; &#8408; 1 Year</AboutSub>
+				</AboutHero>
+				<AboutDesc>
+					During my time at JPMC, I worked as a Technical Analyst Placement
+					Intern; I was on a small agile team building a RESTful API platform
+					that manages a patented automated regression workflow. This automated
+					system reduced the work of testers from weeks to hours. Additionally,
+					I independently reduced the workload of another team via the
+					automation of many manual tasks.
 				</AboutDesc>
 			</About>
 			<Contact offset={4}>
