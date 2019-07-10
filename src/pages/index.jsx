@@ -17,7 +17,7 @@ import Projects from "../views/Projects";
 import About from "../views/About";
 import Contact from "../views/Contact";
 
-import bu from "../images/bu.jpg";
+import bu from "../images/bu.svg";
 import uos from "../images/uos.png";
 import jp from "../images/jp.jpg";
 import adyen from "../images/adyen.png";
@@ -194,13 +194,14 @@ const Index = () => (
 			</About>
 			<Contact offset={4}>
 				<Inner>
-					<Title>Hire Me!</Title>
+					<Title>Hire Me</Title>
 					<ContactText>
 						<a href="mailto:gregoryamitten@gmail.com">Email me</a> or find me on{" "}
 						<a href="https://github.com/Gregam3">GitHub</a> &{" "}
 						<a href="https://www.linkedin.com/in/gregory-mitten-5a0a06106/">
 							LinkedIn
 						</a>
+						. I'm open to discuss both contract and full-time opportunities.
 					</ContactText>
 				</Inner>
 			</Contact>
