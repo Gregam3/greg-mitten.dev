@@ -17,7 +17,8 @@ import Projects from "../views/Projects";
 import About from "../views/About";
 import Contact from "../views/Contact";
 
-import BU from "../images/bu.jpg";
+import bu from "../images/bu.jpg";
+import uos from "../images/uos.png";
 import jp from "../images/jp.jpg";
 import adyen from "../images/adyen.png";
 
@@ -67,7 +68,13 @@ const Index = () => (
 				<BigTitle>
 					Hello, <br /> I'm Greg Mitten.
 				</BigTitle>
-				<Subtitle>I solve business problems with Software Solutions.</Subtitle>
+				<Subtitle>
+					I'm an ardent Software Engineer who's been producing quality projects
+					for over 7 years. The experience I have accrued through diligently
+					pursuing opportunities has bolstered my skills in both width and
+					depth, I am ready to engage with your business problems and put them
+					to use.
+				</Subtitle>
 			</Hero>
 			<Projects offset={1}>
 				<Title>Passion Projects</Title>
@@ -143,7 +150,7 @@ const Index = () => (
 				</ProjectsWrapper>
 			</Projects>
 			<About offset={3}>
-				<Title>Experience</Title>
+				<Title>Company Experience</Title>
 				<AboutHero>
 					<Avatar src={adyen} alt="John Doe" />
 					<AboutSub>Adyen &nbsp; &#8408; Current</AboutSub>
@@ -164,15 +171,36 @@ const Index = () => (
 					I independently reduced the workload of another team via the
 					automation of many manual tasks.
 				</AboutDesc>
+				<Title>Education</Title>
+				<AboutHero>
+					<Avatar src={uos} alt="John Doe" />
+					<AboutSub>University of Sussex &nbsp; &#8408; Current</AboutSub>
+				</AboutHero>
+				<AboutDesc>
+					<b>Advanced Computer Science MSc</b> - Achieved a{" "}
+					<span style={{ fontStyle: "italic" }}>First class with honours</span>{" "}
+					and received the highly scarce{" "}
+					<span style={{ fontStyle: "italic" }}>
+						Chancellor's Scholarship for Academic Excellence
+					</span>
+				</AboutDesc>
+				<AboutHero>
+					<Avatar src={bu} alt="John Doe" />
+					<AboutSub>Bournemouth University &nbsp; &#8408; 3 Years</AboutSub>
+				</AboutHero>
+				<AboutDesc>
+					<b>Software Engineering BSc</b> - a First class with honours
+				</AboutDesc>
 			</About>
 			<Contact offset={4}>
 				<Inner>
-					<Title>Get in touch</Title>
+					<Title>Hire Me!</Title>
 					<ContactText>
-						Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on
-						other platforms:{" "}
-						<a href="https://dribbble.com/LekoArts">Dribbble</a> &{" "}
-						<a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+						<a href="mailto:gregoryamitten@gmail.com">Email me</a> or find me on{" "}
+						<a href="https://github.com/Gregam3">GitHub</a> &{" "}
+						<a href="https://www.linkedin.com/in/gregory-mitten-5a0a06106/">
+							LinkedIn
+						</a>
 					</ContactText>
 				</Inner>
 			</Contact>
