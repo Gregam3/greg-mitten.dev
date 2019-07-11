@@ -201,7 +201,7 @@ const Index = () => (
 						<a href="https://www.linkedin.com/in/gregory-mitten-5a0a06106/">
 							LinkedIn
 						</a>
-						. I'm open to discuss both contract and full-time opportunities.
+						. I'm open to discuss contracts, consultation free of charge.
 					</ContactText>
 				</Inner>
 			</Contact>
