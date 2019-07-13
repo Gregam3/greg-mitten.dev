@@ -153,7 +153,7 @@ const Index = () => (
 				<Title>Company Experience</Title>
 				<AboutHero>
 					<Avatar src={adyen} alt="John Doe" />
-					<AboutSub>Adyen &nbsp; &#8408; Current</AboutSub>
+					<AboutSub>Adyen - Current</AboutSub>
 				</AboutHero>
 				<AboutDesc>
 					I will start work as a Developer at Adyen on the 16th of September
@@ -161,7 +161,7 @@ const Index = () => (
 				</AboutDesc>
 				<AboutHero>
 					<Avatar src={jp} alt="John Doe" />
-					<AboutSub>JPMorgan Chase {"&"} Co &nbsp; &#8408; 1 Year</AboutSub>
+					<AboutSub>JPMorgan Chase {"&"} Co - 1 Year</AboutSub>
 				</AboutHero>
 				<AboutDesc>
 					During my time at JPMC, I worked as a Technical Analyst Placement
@@ -174,7 +174,7 @@ const Index = () => (
 				<Title>Education</Title>
 				<AboutHero>
 					<Avatar src={uos} alt="John Doe" />
-					<AboutSub>University of Sussex &nbsp; &#8408; Current</AboutSub>
+					<AboutSub>University of Sussex - Current</AboutSub>
 				</AboutHero>
 				<AboutDesc>
 					<b>Advanced Computer Science MSc</b> - Achieved a{" "}
@@ -186,7 +186,7 @@ const Index = () => (
 				</AboutDesc>
 				<AboutHero>
 					<Avatar src={bu} alt="John Doe" />
-					<AboutSub>Bournemouth University &nbsp; &#8408; 3 Years</AboutSub>
+					<AboutSub>Bournemouth University - 3 Years</AboutSub>
 				</AboutHero>
 				<AboutDesc>
 					<b>Software Engineering BSc</b> - a First class with honours
