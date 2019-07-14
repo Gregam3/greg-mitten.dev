@@ -63,8 +63,8 @@ const Footer = styled.footer`
 const Index = () => (
 	<>
 		<Layout />
-		<Parallax pages={5}>
-			<Hero offset={0}>
+		<Parallax pages={getOffset(5.5)}>
+			<Hero offset={getOffset(0.2)}>
 				<BigTitle>
 					Hello, <br /> I'm Greg Mitten.
 				</BigTitle>
@@ -76,7 +76,7 @@ const Index = () => (
 					to use.
 				</Subtitle>
 			</Hero>
-			<Projects offset={1}>
+			<Projects offset={getOffset(1)}>
 				<Title>Passion Projects</Title>
 				<ProjectsWrapper>
 					<ProjectCard
@@ -149,7 +149,7 @@ const Index = () => (
 					</ProjectCard>
 				</ProjectsWrapper>
 			</Projects>
-			<About offset={3}>
+			<About offset={getOffset(3.6)}>
 				<Title>Company Experience</Title>
 				<AboutHero>
 					<Avatar src={adyen} alt="John Doe" />
@@ -192,7 +192,7 @@ const Index = () => (
 					<b>Software Engineering BSc</b> - a First class with honours
 				</AboutDesc>
 			</About>
-			<Contact offset={4}>
+			<Contact offset={getOffset(4.8)}>
 				<Inner>
 					<Title>Hire Me</Title>
 					<ContactText>
@@ -208,5 +208,15 @@ const Index = () => (
 		</Parallax>
 	</>
 );
+
+const getOffset = (v, b) => {
+	const bigScreen = window.innerHeight > 600;
+
+	if (b === undefined) console.log(getOffset(v, false));
+	if (bigScreen && v < 1) return 0;
+	if (!bigScreen && v === 1) return 3;
+	if (!bigScreen || window.innerWidth < 400) return v * 2;
+	return v;
+};
 
 export default Index;
