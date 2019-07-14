@@ -149,7 +149,7 @@ const Index = () => (
 					</ProjectCard>
 				</ProjectsWrapper>
 			</Projects>
-			<About offset={getOffset(3.6)}>
+			<About offset={getOffset(4)}>
 				<Title>Company Experience</Title>
 				<AboutHero>
 					<Avatar src={adyen} alt="John Doe" />
@@ -192,7 +192,7 @@ const Index = () => (
 					<b>Software Engineering BSc</b> - a First class with honours
 				</AboutDesc>
 			</About>
-			<Contact offset={getOffset(4.8)}>
+			<Contact offset={getOffset(5.2)}>
 				<Inner>
 					<Title>Hire Me</Title>
 					<ContactText>
