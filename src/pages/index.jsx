@@ -63,7 +63,7 @@ const Footer = styled.footer`
 const Index = () => (
 	<>
 		<Layout />
-		<Parallax pages={getOffset(6.5)}>
+		<Parallax pages={getOffset(7.5)}>
 			<Hero offset={getOffset(0.2)}>
 				<BigTitle>
 					Hello, <br /> I'm Greg Mitten.
