@@ -211,7 +211,7 @@ const Index = () => (
 
 const getOffset = (v, b) => {
 	//Node throws an error when building unless this line is present
-	if (typeof window === undefined) return 0;
+	if (typeof window === "undefined") return 0;
 
 	const bigScreen = window.innerHeight > 600;
 
