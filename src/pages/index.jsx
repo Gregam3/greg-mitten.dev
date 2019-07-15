@@ -14,13 +14,23 @@ import { Title, BigTitle, Subtitle } from "../elements/Titles";
 // Views
 import Hero from "../views/Hero";
 import Projects from "../views/Projects";
+import Technologies from "../views/Technologies";
 import About from "../views/About";
 import Contact from "../views/Contact";
 
-import bu from "../images/bu.svg";
+//Icons
+import {} from "@fortawesome/free-solid-svg-icons";
+import { faJava, faJs } from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faJava, faJs);
+
+//Images
+import bu from "../images/bu.png";
 import uos from "../images/uos.png";
 import jp from "../images/jp.jpg";
 import adyen from "../images/adyen.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProjectsWrapper = styled.div`
 	${tw`flex flex-wrap justify-between mt-8`};
@@ -69,31 +79,30 @@ const Index = () => (
 					Hello, <br /> I'm Greg Mitten.
 				</BigTitle>
 				<Subtitle>
-					I'm an ardent Software Engineer who's been producing quality projects
-					for over 7 years. The experience I have accrued through diligently
-					pursuing opportunities has bolstered my skills in both width and
-					depth, I am ready to engage with your business problems and put them
-					to use.
+					I'm an ardent Software Engineer who's been accruing technical skills
+					for over 7 years and I'm ready to put them to use to solve your
+					business problems.
 				</Subtitle>
 			</Hero>
-			<Projects offset={getOffset(1)}>
+			<Projects offset={getOffset(2)}>
 				<Title>Passion Projects</Title>
 				<ProjectsWrapper>
 					<ProjectCard
-						title="Tomorrow IDE (TIDE)"
+						title="TIDE"
 						link="https://tmrow.com"
 						bg="linear-gradient(90deg, rgba(179,1,21,1) 0%, rgba(255,108,61,1) 100%);"
+						technologies="Node.js, ReactJS, WebSockets, Compilers"
 					>
-						I built an Integrated Development Environment and Code Comparison
-						Engine for Tomorrow's new mobile application. Reducing barriers for
-						all volunteer engineers to contribute their highly demanded
-						technical skills to climate change, one of the most pressing issues
-						of our time.
+						I built an Integrated Development Environment for Tomorrow's new
+						mobile application. Reducing barriers for all volunteer engineers to
+						contribute their highly demanded technical skills to climate change,
+						one of the most pressing issues of our time.
 					</ProjectCard>
 					<ProjectCard
-						title="JavaScript Code Comparison Engine"
-						link="https://catalystpf.co.uk/"
+						title="JeSSE"
+						link=""
 						bg="linear-gradient(90deg, rgba(255,108,61,1) 0%, rgba(255,203,36,1) 100%);"
+						technologies="JavaScript, Compilers, Babel"
 					>
 						Using the techniques I learnt during the development of TIDE, I will
 						be extracting and adapting a JavaScript Comparison engine that uses
@@ -107,8 +116,9 @@ const Index = () => (
 				<ProjectsWrapper>
 					<ProjectCard
 						title="Catalyst"
-						link="https://www.behance.net/gallery/38068151/Eagle"
+						link="https://catalystpf.co.uk/"
 						bg="linear-gradient(90deg, rgba(113,4,171,1) 0%, rgba(36,101,255,1) 100%);"
+						technologies="Java, Spring, API, AngularJS, MySQL, AWS"
 					>
 						I worked over 2 contracts to build a large scale data retrieval web
 						application for Catalyst. Providing data that's unavailable to their
@@ -116,21 +126,23 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title='Forum "Webscraper"'
-						link="https://www.behance.net/gallery/43907099/Tomb-Raider"
+						link=""
 						bg="linear-gradient(90deg, rgba(36,101,255,1) 0%, rgba(36,245,255,1) 100%);"
+						technologies="Java"
 					>
-						Commissioned by the head of research in the Bournemouth University
-						Sport Faculty. Using an intelligent Software architecture my design
-						uses the same code with slight configuration changes to fetch data
-						from over 20 heterogenous sites.
+						Commissioned by researchers at Bournemouth University, Using an
+						intelligent Software architecture my design uses the same code with
+						slight configuration changes to fetch data from over 20 heterogenous
+						sites.
 					</ProjectCard>
 				</ProjectsWrapper>
 				<Title>Projects I've Lead</Title>
 				<ProjectsWrapper>
 					<ProjectCard
 						title="UK House price heatmap"
-						link="https://www.behance.net/gallery/43907099/Tomb-Raider"
+						link="https://github.com/Gregam3/UKHousePriceHeatMap"
 						bg="linear-gradient(90deg, rgba(17,85,3,1) 0%, rgba(0,176,16,1) 100%);"
+						technologies="Java, ReactNative, API, Docker, TravisCI, MySQL, AWS"
 					>
 						I lead a team developing an application that fetches, transforms and
 						displays all UK houseprice data over the last 15 years. Even
@@ -138,8 +150,9 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="Tempus"
-						link="https://www.behance.net/gallery/38068151/Eagle"
-						bg="linear-gradient(90deg, rgba(0,176,16,1) 0%, rgba(1,212,20,1) 100%);"
+						link="https://github.com/ASEGroup1/Tempus"
+						bg="linear-gradient(90deg, rgba(0,176,16,1) 0%, rgba(0,255,117,1) 100%);"
+						technologies="Scala, Play, ReactJS, API, MySQL, AWS, Docker, TeamCity, DSL, Compilers "
 					>
 						Tempus is a customisable timetabler with a custom compiled Domain
 						Specific Language. It's simple, you write constraints i.e. nothing
@@ -149,6 +162,20 @@ const Index = () => (
 					</ProjectCard>
 				</ProjectsWrapper>
 			</Projects>
+			<Technologies offset={1}>
+				<Title>Skills</Title>
+				<br />
+				<h1 style={{ color: "white" }}>
+					<span>
+						<FontAwesomeIcon icon={["fab", "java"]} style={{ fontSize: 100 }} />
+						&nbsp; Java
+					</span>
+					<span>
+						<FontAwesomeIcon icon={["fab", "js"]} style={{ fontSize: 100 }} />
+						&nbsp; JavaScript
+					</span>
+				</h1>
+			</Technologies>
 			<About offset={getOffset(4)}>
 				<Title>Company Experience</Title>
 				<AboutHero>
