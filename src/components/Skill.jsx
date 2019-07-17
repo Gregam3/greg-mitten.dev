@@ -15,17 +15,16 @@ const Wrapper = styled.a`
 	top: ${props => props.top};
 `;
 
+const Avatar = styled.img`
+	${tw`w-32 xl:w-48 shadow-lg h-auto`};
+`;
+
 const Text = styled.div`
 	${tw`opacity-75 font-sans text-sm md:text-base`};
 	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
-const Skill = ({ logo, name }) => (
-	<Wrapper target="_blank" rel="noopener noreferrer" bg={bg}>
-		<Text style={{ fontSize: 20 }}>{name}</Text>
-		<Avatar src={logo} alt={name} />
-	</Wrapper>
-);
+const Skill = ({ logo, name }) => <Avatar src={logo} alt={name} />;
 
 export default Skill;
 

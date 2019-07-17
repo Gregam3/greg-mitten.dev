@@ -25,12 +25,24 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faJava, faJs);
 
+import ReactWordcloud from "react-wordcloud";
+import skills from "../skills";
+
 //Images
+import scala from "../images/scala.png";
+import java from "../images/java.png";
+import node from "../images/node.png";
+import js from "../images/js.png";
+import react from "../images/react.png";
+import git from "../images/git.png";
+import spring from "../images/spring.png";
+import mySql from "../images/mysql.png";
+import python from "../images/python.png";
 import bu from "../images/bu.png";
 import uos from "../images/uos.png";
 import jp from "../images/jp.jpg";
 import adyen from "../images/adyen.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Skill from "../components/Skill";
 
 const ProjectsWrapper = styled.div`
 	${tw`flex flex-wrap justify-between mt-8`};
@@ -165,16 +177,7 @@ const Index = () => (
 			<Technologies offset={1}>
 				<Title>Skills</Title>
 				<br />
-				<h1 style={{ color: "white" }}>
-					<span>
-						<FontAwesomeIcon icon={["fab", "java"]} style={{ fontSize: 100 }} />
-						&nbsp; Java
-					</span>
-					<span>
-						<FontAwesomeIcon icon={["fab", "js"]} style={{ fontSize: 100 }} />
-						&nbsp; JavaScript
-					</span>
-				</h1>
+				<ReactWordcloud words={skills} minSize={[10000, 1000]} />
 			</Technologies>
 			<About offset={getOffset(4)}>
 				<Title>Company Experience</Title>
