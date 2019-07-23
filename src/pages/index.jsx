@@ -25,9 +25,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faJava, faJs);
 
-import ReactWordcloud from "react-wordcloud";
-import skills from "../skills";
-
 //Images
 import scala from "../images/scala.png";
 import java from "../images/java.png";
@@ -85,8 +82,8 @@ const Footer = styled.footer`
 const Index = () => (
 	<>
 		<Layout />
-		<Parallax pages={getOffset(7.5)}>
-			<Hero offset={getOffset(0.2)}>
+		<Parallax pages={getOffset(0)}>
+			<Hero offset={getOffset(1)}>
 				<BigTitle>
 					Hello, <br /> I'm Greg Mitten.
 				</BigTitle>
@@ -137,7 +134,7 @@ const Index = () => (
 						competitors a huge advantage.
 					</ProjectCard>
 					<ProjectCard
-						title='Forum "Webscraper"'
+						title="Forum Webscraper"
 						link=""
 						bg="linear-gradient(90deg, rgba(36,101,255,1) 0%, rgba(36,245,255,1) 100%);"
 						technologies="Java"
@@ -174,12 +171,7 @@ const Index = () => (
 					</ProjectCard>
 				</ProjectsWrapper>
 			</Projects>
-			<Technologies offset={1}>
-				<Title>Skills</Title>
-				<br />
-				<ReactWordcloud words={skills} minSize={[10000, 1000]} />
-			</Technologies>
-			<About offset={getOffset(4)}>
+			<About offset={getOffset(3)}>
 				<Title>Company Experience</Title>
 				<AboutHero>
 					<Avatar src={adyen} alt="John Doe" />
@@ -204,14 +196,14 @@ const Index = () => (
 				<Title>Education</Title>
 				<AboutHero>
 					<Avatar src={uos} alt="John Doe" />
-					<AboutSub>University of Sussex - Current</AboutSub>
+					<AboutSub>University of Sussex - 1 Year</AboutSub>
 				</AboutHero>
 				<AboutDesc>
 					<b>Advanced Computer Science MSc</b> - Achieved a{" "}
-					<span style={{ fontStyle: "italic" }}>First class with honours</span>{" "}
-					and received the highly scarce{" "}
+					<span style={{ fontStyle: "italic" }}>First class with honours</span>
+					&nbsp;overall and in every module and received the scarce{" "}
 					<span style={{ fontStyle: "italic" }}>
-						Chancellor's Scholarship for Academic Excellence
+						Chancellor's Scholarship for Academic Excellence.
 					</span>
 				</AboutDesc>
 				<AboutHero>
@@ -222,7 +214,7 @@ const Index = () => (
 					<b>Software Engineering BSc</b> - a First class with honours
 				</AboutDesc>
 			</About>
-			<Contact offset={getOffset(5.2)}>
+			<Contact offset={getOffset(4)}>
 				<Inner>
 					<Title>Hire Me</Title>
 					<ContactText>
@@ -231,7 +223,8 @@ const Index = () => (
 						<a href="https://www.linkedin.com/in/gregory-mitten-5a0a06106/">
 							LinkedIn
 						</a>
-						. I'm open to discuss contracts, consultation free of charge.
+						. I'm open to discuss any software project, consultation free of
+						charge.
 					</ContactText>
 				</Inner>
 			</Contact>
@@ -239,17 +232,25 @@ const Index = () => (
 	</>
 );
 
-const getOffset = (v, b) => {
+const offsets = {
+	veryLarge: [6, 0, 0.6, 4, 5],
+	large: [6, 0, 1, 3.5, 4.5],
+	medium: [7.5, 0.4, 2, 5, 6.5],
+	small: [10, 0.4, 3, 7.5, 9],
+	mobile: [14, 0.4, 4, 10, 12.5]
+};
+
+const getOffset = i => {
 	//Node throws an error when building unless this line is present
 	if (typeof window === "undefined") return 0;
 
-	const bigScreen = window.innerHeight > 600;
+	const windowSize = window.innerHeight + window.innerWidth;
 
-	if (b === undefined) console.log(getOffset(v, false));
-	if (bigScreen && v < 1) return 0;
-	if (!bigScreen && v === 1) return 3;
-	if (!bigScreen || window.innerWidth < 400) return v * 2;
-	return v;
+	if (windowSize > 2500) return offsets.veryLarge[i];
+	else if (windowSize > 2000) return offsets.large[i];
+	else if (windowSize > 1500) return offsets.medium[i];
+	else if (windowSize > 1000) return offsets.small[i];
+	else return offsets.mobile[i];
 };
 
 export default Index;

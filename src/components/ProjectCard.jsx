@@ -26,8 +26,9 @@ const Title = styled.div`
 
 const ProjectCard = ({ title, link, children, bg, technologies }) => (
 	<Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
-		<Text style={{ fontSize: 20 }}>{children}</Text>
+		<Text style={{ fontSize: 18 }}>{children}</Text>
 		<Title>{title}</Title>
+		<Text style={{ fontSize: 20, fontWeight: "bold" }}>{technologies}</Text>
 	</Wrapper>
 );
 
