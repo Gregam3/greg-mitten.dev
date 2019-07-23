@@ -26,15 +26,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faJava, faJs);
 
 //Images
-import scala from "../images/scala.png";
-import java from "../images/java.png";
-import node from "../images/node.png";
-import js from "../images/js.png";
-import react from "../images/react.png";
-import git from "../images/git.png";
-import spring from "../images/spring.png";
-import mySql from "../images/mysql.png";
-import python from "../images/python.png";
 import bu from "../images/bu.png";
 import uos from "../images/uos.png";
 import jp from "../images/jp.jpg";
