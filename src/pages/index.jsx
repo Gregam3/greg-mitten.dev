@@ -19,11 +19,16 @@ import About from "../views/About";
 import Contact from "../views/Contact";
 
 //Icons
-import {} from "@fortawesome/free-solid-svg-icons";
-import { faJava, faJs } from "@fortawesome/free-brands-svg-icons";
+import {
+	faGlobe,
+	faImages,
+	faFilePdf,
+	faVideo
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-library.add(faJava, faJs);
+library.add(faGithub, faGlobe, faImages, faFilePdf, faVideo);
 
 //Images
 import bu from "../images/bu.png";
@@ -89,9 +94,11 @@ const Index = () => (
 				<ProjectsWrapper>
 					<ProjectCard
 						title="TIDE"
-						link="https://tmrow.com"
+						site="https://tmrow.com"
 						bg="linear-gradient(90deg, rgba(179,1,21,1) 0%, rgba(255,108,61,1) 100%);"
 						technologies="Node.js, ReactJS, WebSockets, Compilers"
+						github="TIDE"
+						paper="https://github.com/Gregam3/Thesis/raw/master/thesis.pdf"
 					>
 						I built an Integrated Development Environment for Tomorrow's new
 						mobile application. Reducing barriers for all volunteer engineers to
@@ -100,23 +107,22 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="JeSSE"
-						link=""
 						bg="linear-gradient(90deg, rgba(255,108,61,1) 0%, rgba(255,203,36,1) 100%);"
 						technologies="JavaScript, Compilers, Babel"
+						video="https://www.youtube.com"
 					>
 						Using the techniques I learnt during the development of TIDE, I will
 						be extracting and adapting a JavaScript Comparison engine that uses
 						compiler technology to compare the similiarities of JavaScript
 						expressions, functions or even whole modules! This engine has been
-						evaluated to perform better than many industry standards in many
-						circumstances.
+						evaluated to perform remarkably well.
 					</ProjectCard>
 				</ProjectsWrapper>
 				<Title>Independent Contracting</Title>
 				<ProjectsWrapper>
 					<ProjectCard
 						title="Catalyst"
-						link="https://catalystpf.co.uk/"
+						site="https://catalystpf.co.uk/"
 						bg="linear-gradient(90deg, rgba(113,4,171,1) 0%, rgba(36,101,255,1) 100%);"
 						technologies="Java, Spring, API, AngularJS, MySQL, AWS"
 					>
@@ -126,7 +132,7 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="Forum Webscraper"
-						link=""
+						site="https://www.bournemouth.ac.uk"
 						bg="linear-gradient(90deg, rgba(36,101,255,1) 0%, rgba(36,245,255,1) 100%);"
 						technologies="Java"
 					>
@@ -140,9 +146,10 @@ const Index = () => (
 				<ProjectsWrapper>
 					<ProjectCard
 						title="UK House price heatmap"
-						link="https://github.com/Gregam3/UKHousePriceHeatMap"
 						bg="linear-gradient(90deg, rgba(17,85,3,1) 0%, rgba(0,176,16,1) 100%);"
 						technologies="Java, ReactNative, API, Docker, TravisCI, MySQL, AWS"
+						github="UKHousePriceHeatMap"
+						images="https://github.com/Gregam3/UKHousePriceHeatMap/blob/master/README.md"
 					>
 						I lead a team developing an application that fetches, transforms and
 						displays all UK houseprice data over the last 15 years. Even
@@ -150,9 +157,9 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="Tempus"
-						link="https://github.com/ASEGroup1/Tempus"
 						bg="linear-gradient(90deg, rgba(0,176,16,1) 0%, rgba(0,255,117,1) 100%);"
 						technologies="Scala, Play, ReactJS, API, MySQL, AWS, Docker, TeamCity, DSL, Compilers "
+						github="Tempus"
 					>
 						Tempus is a customisable timetabler with a custom compiled Domain
 						Specific Language. It's simple, you write constraints i.e. nothing
@@ -165,7 +172,7 @@ const Index = () => (
 			<About offset={getOffset(3)}>
 				<Title>Company Experience</Title>
 				<AboutHero>
-					<Avatar src={adyen} alt="John Doe" />
+					<Avatar src={adyen} alt="Adyen" />
 					<AboutSub>Adyen - Current</AboutSub>
 				</AboutHero>
 				<AboutDesc>
@@ -173,7 +180,7 @@ const Index = () => (
 					2019
 				</AboutDesc>
 				<AboutHero>
-					<Avatar src={jp} alt="John Doe" />
+					<Avatar src={jp} alt="JP" />
 					<AboutSub>JPMorgan Chase {"&"} Co - 1 Year</AboutSub>
 				</AboutHero>
 				<AboutDesc>
@@ -186,7 +193,7 @@ const Index = () => (
 				</AboutDesc>
 				<Title>Education</Title>
 				<AboutHero>
-					<Avatar src={uos} alt="John Doe" />
+					<Avatar src={uos} alt="Sussex" />
 					<AboutSub>University of Sussex - 1 Year</AboutSub>
 				</AboutHero>
 				<AboutDesc>
@@ -198,7 +205,7 @@ const Index = () => (
 					</span>
 				</AboutDesc>
 				<AboutHero>
-					<Avatar src={bu} alt="John Doe" />
+					<Avatar src={bu} alt="BU" />
 					<AboutSub>Bournemouth University - 3 Years</AboutSub>
 				</AboutHero>
 				<AboutDesc>
@@ -224,7 +231,7 @@ const Index = () => (
 );
 
 const offsets = {
-	veryLarge: [6, 0, 0.6, 4, 5],
+	veryLarge: [6, 0, 1, 4, 5],
 	large: [6, 0, 1, 3.5, 4.5],
 	medium: [7.5, 0.4, 2, 5, 6.5],
 	small: [10, 0.4, 3, 7.5, 9],

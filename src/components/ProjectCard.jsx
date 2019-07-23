@@ -24,11 +24,49 @@ const Title = styled.div`
 	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
-const ProjectCard = ({ title, link, children, bg, technologies }) => (
-	<Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
+const ProjectCard = ({
+	title,
+	site,
+	children,
+	bg,
+	technologies,
+	github,
+	images,
+	video,
+	paper
+}) => (
+	<Wrapper target="_blank" rel="noopener noreferrer" bg={bg}>
 		<Text style={{ fontSize: 18 }}>{children}</Text>
 		<Title>{title}</Title>
 		<Text style={{ fontSize: 20, fontWeight: "bold" }}>{technologies}</Text>
+		<h1>
+			{/* TODO ITERATE OVER "LINKS" OBJECT */}
+			{github && (
+				<a href={"https://github.com/Gregam3/" + github}>
+					<FontAwesomeIcon icon={["fab", "github"]} />
+				</a>
+			)}{" "}
+			{site && (
+				<a href={site}>
+					<FontAwesomeIcon icon="globe" />
+				</a>
+			)}{" "}
+			{images && (
+				<a href={images}>
+					<FontAwesomeIcon icon="images" />
+				</a>
+			)}{" "}
+			{video && (
+				<a href={video}>
+					<FontAwesomeIcon icon={["fa", "youtube"]} />
+				</a>
+			)}{" "}
+			{paper && (
+				<a href={paper}>
+					<FontAwesomeIcon icon="file-pdf" />
+				</a>
+			)}
+		</h1>
 	</Wrapper>
 );
 
