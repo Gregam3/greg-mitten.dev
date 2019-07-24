@@ -84,9 +84,8 @@ const Index = () => (
 					Hello, <br /> I'm Greg Mitten.
 				</BigTitle>
 				<Subtitle>
-					I'm an ardent Software Engineer who's been accruing technical skills
-					for over 7 years and I'm ready to put them to use to solve your
-					business problems.
+					I'm a Software Engineer who's been accruing technical skills for over
+					7 years and I'm putting them to use to solve business problems.
 				</Subtitle>
 			</Hero>
 			<Projects offset={getOffset(2)}>
@@ -128,7 +127,7 @@ const Index = () => (
 					>
 						I worked over 2 contracts to build a large scale data retrieval web
 						application for Catalyst. Providing data that's unavailable to their
-						competitors a huge advantage.
+						competitors, a huge advantage.
 					</ProjectCard>
 					<ProjectCard
 						title="Forum Webscraper"
@@ -136,10 +135,10 @@ const Index = () => (
 						bg="linear-gradient(90deg, rgba(36,101,255,1) 0%, rgba(36,245,255,1) 100%);"
 						technologies="Java"
 					>
-						Commissioned by researchers at Bournemouth University, Using an
-						intelligent Software architecture my design uses the same code with
-						slight configuration changes to fetch data from over 20 heterogenous
-						sites.
+						Commissioned by researchers at Bournemouth University, I built an
+						application that scrapes data from over 20 vastly different forums
+						within minutes. This was achieved using an intelligent Software
+						architecture that makes abstract features present in all forums.
 					</ProjectCard>
 				</ProjectsWrapper>
 				<Title>Projects I've Lead</Title>
@@ -153,7 +152,7 @@ const Index = () => (
 					>
 						I lead a team developing an application that fetches, transforms and
 						displays all UK houseprice data over the last 15 years. Even
-						grouping data based on geolocation data
+						grouping data based on geolocation data.
 					</ProjectCard>
 					<ProjectCard
 						title="Tempus"
