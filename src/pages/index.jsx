@@ -106,7 +106,7 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="JeSSE"
-						site="jesse.greg-mitten.dev"
+						site="https://jesse.greg-mitten.dev"
 						bg="linear-gradient(90deg, rgba(255,108,61,1) 0%, rgba(255,203,36,1) 100%);"
 						technologies="JavaScript, Compilers, Babel"
 						video="https://www.youtube.com"
