@@ -106,15 +106,17 @@ const Index = () => (
 					</ProjectCard>
 					<ProjectCard
 						title="JeSSE"
+						site="jesse.greg-mitten.dev"
 						bg="linear-gradient(90deg, rgba(255,108,61,1) 0%, rgba(255,203,36,1) 100%);"
 						technologies="JavaScript, Compilers, Babel"
 						video="https://www.youtube.com"
 					>
-						Using the techniques I learnt during the development of TIDE, I will
-						be extracting and adapting a JavaScript Comparison engine that uses
-						compiler technology to compare the similiarities of JavaScript
+						Using the techniques I learnt during the development of TIDE, I have
+						extracted and adapted my JavaScript Comparison Engine (JeSSE) that
+						uses compiler technology to compare the similiarities of JavaScript
 						expressions, functions or even whole modules! This engine has been
-						evaluated to perform remarkably well.
+						evaluated to perform remarkably well. The site is live on the link
+						below.
 					</ProjectCard>
 				</ProjectsWrapper>
 				<Title>Independent Contracting</Title>
